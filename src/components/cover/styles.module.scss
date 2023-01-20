@@ -1,0 +1,9 @@
+.cover {
+  width: var(--content);
+  &__name {
+    font-size: 4vw;
+  }
+  &__apresentation {
+    font-size: 18vw;
+  }
+}

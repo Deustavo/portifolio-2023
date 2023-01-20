@@ -1,0 +1,30 @@
+$navigation-container-size:  calc(100vw - 2 * var(--side-margin));
+$navigation-button-size: calc(.8 * var(--side-margin));
+$navigation-arrow-size: calc(.4 * var(--side-margin));
+
+.layout {
+  &__navitation {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: $navigation-container-size;
+
+    &__left, &__right {
+      border: 1px solid #000;
+      border-radius: 50%;
+      width: $navigation-button-size;
+      height: $navigation-button-size;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: $navigation-arrow-size;
+      }
+    }
+
+    &__left {
+      transform: rotate(180deg);
+    }
+  }
+}

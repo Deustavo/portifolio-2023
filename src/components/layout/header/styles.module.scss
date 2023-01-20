@@ -1,0 +1,21 @@
+.layout {
+  &__header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px var(--side-margin);
+    height: 80px;
+
+    &__left {
+      font-size: 24px;
+    }
+
+    &__right {
+      font-size: 24px;
+    }
+  }
+}
