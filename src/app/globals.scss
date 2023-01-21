@@ -1,8 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Flamenco:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@200;400;700&display=swap');
 
 :root {
   --side-margin: 4vw;
   --content: calc(100vw - 4 * var(--side-margin));
+  --mouse-x: 0px;
+  --mouse-y: 0px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,7 +15,9 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: 'Flamenco', cursive;
+  font-family: 'Josefin Slab', serif;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 body {

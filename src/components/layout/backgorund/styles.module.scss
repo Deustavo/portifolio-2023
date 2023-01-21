@@ -1,6 +1,8 @@
 $color-clippath-1: #2BE4B8;
 $color-clippath-2: #FF45A9;
 
+$cursor-size: calc(.8 * var(--side-margin));
+
 .layout {
   &__background {
     z-index: -1;
@@ -10,7 +12,7 @@ $color-clippath-2: #FF45A9;
       top: 0;
       left: 0;
       width: 100vw;
-      height: 100vw;
+      height: 100vh;
       background: rgba(255, 255, 255, 0.5);
       backdrop-filter: blur(50px);
     }
@@ -22,8 +24,11 @@ $color-clippath-2: #FF45A9;
         width: 1200px;
         height: 1000px;
         position: fixed;
-        top: -300px;
-        left: -100px;
+
+        left: calc(-100px + (var(--mouse-x) / 20));
+        top: calc(-300px + (var(--mouse-y) / 20));
+
+        animation: floating__clippath 10s infinite linear;
       }
       &__2 {
         background-color: $color-clippath-2;
@@ -31,9 +36,34 @@ $color-clippath-2: #FF45A9;
         width: 1600px;
         height: 1600px;
         position: fixed;
-        bottom: -800px;
-        right: -800px;
+
+        bottom: calc(-800px + (var(--mouse-x) / 30));
+        right: calc(-800px + (var(--mouse-y) / 30));
+        animation: floating__clippath 15s infinite linear;
       }
     }
+  }
+
+  &__cursor {
+    border: 1px solid #000;
+    border-radius: 50%;
+    width: $cursor-size;
+    height: $cursor-size;
+    position: absolute;
+    left: calc(var(--mouse-x) - ($cursor-size / 2));
+    top: calc(var(--mouse-y) - ($cursor-size / 2));
+  }
+}
+
+
+@keyframes floating__clippath {
+  0% {
+    rotate: 0deg;
+  }
+  50% {
+    rotate: -50deg;
+  }
+  100% {
+    rotate: 0deg;
   }
 }

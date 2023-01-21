@@ -6,6 +6,8 @@ export default function Backgorund() {
       <div className={styles.layout__background__clippath__1} />
       <div className={styles.layout__background__clippath__2} />
       <div className={styles.layout__background__blur} />
+
+      <div className={styles.layout__cursor} />
     </div>
   );
 }
