@@ -10,6 +10,8 @@ $navigation-arrow-size: calc(.4 * var(--side-margin));
     width: $navigation-container-size;
 
     &__left, &__right {
+      cursor: pointer;
+      background: transparent;
       border: 1px solid #000;
       border-radius: 50%;
       width: $navigation-button-size;
@@ -20,6 +22,10 @@ $navigation-arrow-size: calc(.4 * var(--side-margin));
 
       img {
         width: $navigation-arrow-size;
+      }
+
+      &:disabled {
+        visibility: hidden;
       }
     }
 

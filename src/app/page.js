@@ -1,5 +1,5 @@
 import Cover from "@/components/cover";
 
-export default function Home() {
+export default function HomePage() {
   return <Cover />;
 }
